@@ -1,0 +1,74 @@
+#blog {
+	padding: 10%;
+	width: 100%;
+	background: white;
+	height: 100%;
+}
+
+#sideblog {
+	width: 20%;
+	float: left;
+	font-family: 'Cinzel', serif;
+	font-size: 25px;
+}
+
+/* CENTER CONTENT*/
+
+#date{
+	font-family: verdana;
+	font-size: .7em;
+}
+
+#headline{
+	font-family: garamond;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.3em;
+	color: #5F9EA0;
+}
+#centerblog {
+	width: 90%;
+	text-align: left;
+}
+
+.outer, .outer:hover {
+	-webkit-transition: all 1s ease; 
+	transition: all 1s ease;
+	overflow: hidden;
+}
+.outer{
+	color: black; 
+	border: 1px solid #ADD8E6;
+	overflow: hidden;
+}
+.outer:hover {
+	color: black; 
+	border: 3px solid white;
+	overflow: hidden;
+}
+.inner {
+	max-height: 50px; 
+	overflow: auto;
+	-webkit-transition: max-height 1s ease; 
+	transition: max-height 1s ease;
+	overflow-y: hidden;
+}
+.outer:hover > .inner {
+	max-height: 1200px;
+	-webkit-transition: max-height 3s ease 0.5s; 
+	transition: max-height 3s ease 0.5s;
+}
+.reference {
+	background-color: #B0E0E6;
+	color: #708090;
+}
+.outer:hover > .reference{
+	background-color: white;
+	color: black;
+}
+.reference a:hover{
+	color: #778899;
+}
+
+
+

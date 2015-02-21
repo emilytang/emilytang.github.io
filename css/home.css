@@ -1,0 +1,229 @@
+/**Home**/
+body {
+	overflow-x: hidden; 
+}
+#home {
+	width: 100%;
+	background: white;
+}
+
+/*CLOUDS FOR BACKGROUND */
+
+/*The container will also serve as the SKY*/
+	#clouds{
+		background: -webkit-linear-gradient(top, #D1D1D1 0%, #fff 100%);
+		background: -linear-gradient(top, #D1D1D1 0%, #fff 100%);
+		background: -moz-linear-gradient(top, white 0%, #fff 100%);
+	}
+
+	/*Time to finalise the cloud shape*/
+	.cloud {
+		width: 200px; height: 60px;
+		background: #fff;
+		border-radius: 200px;
+		-moz-border-radius: 200px;
+		-webkit-border-radius: 200px;
+		position: relative; 
+	}
+
+	.cloud:before, .cloud:after {
+		content: '';
+		position: absolute; 
+		background: #fff;
+		width: 100px; height: 80px;
+		position: absolute; top: -15px; left: 10px;
+		border-radius: 100px;
+		-moz-border-radius: 100px;
+		-webkit-border-radius: 100px;
+		
+		-webkit-transform: rotate(30deg);
+		transform: rotate(30deg);
+		-moz-transform: rotate(30deg);
+	}
+
+	.cloud:after {
+		width: 120px; height: 120px;
+		top: -55px; left: auto; right: 15px;
+	}
+
+	/*Time to animate*/
+	.x1 {
+		-webkit-animation: moveclouds 15s linear infinite;
+		-moz-animation: moveclouds 15s linear infinite;
+		-o-animation: moveclouds 15s linear infinite;
+	}
+
+	/*variable speed, opacity, and position of clouds for realistic effect*/
+	.x2 {
+		left: 200px;
+		
+		-webkit-transform: scale(0.6);
+		-moz-transform: scale(0.6);
+		transform: scale(0.6);
+		opacity: 0.6; /*opacity proportional to the size*/
+		
+		/*Speed will also be proportional to the size and opacity*/
+		/*More the speed. Less the time in 's' = seconds*/
+		-webkit-animation: moveclouds 25s linear infinite;
+		-moz-animation: moveclouds 25s linear infinite;
+		-o-animation: moveclouds 25s linear infinite;
+	}
+
+	.x3 {
+		left: -250px; top: -200px;
+		-webkit-transform: scale(0.8);
+		-moz-transform: scale(0.8);
+		transform: scale(0.8);
+		opacity: 0.8; /*opacity proportional to the size*/
+		-webkit-animation: moveclouds 20s linear infinite;
+		-moz-animation: moveclouds 20s linear infinite;
+		-o-animation: moveclouds 20s linear infinite;
+	}
+
+	.x4 {
+		left: 470px; top: -250px;
+		-webkit-transform: scale(0.75);
+		-moz-transform: scale(0.75);
+		transform: scale(0.75);
+		opacity: 0.75; /*opacity proportional to the size*/
+		-webkit-animation: moveclouds 18s linear infinite;
+		-moz-animation: moveclouds 18s linear infinite;
+		-o-animation: moveclouds 18s linear infinite;
+	}
+
+	.x5 {
+		left: -150px; top: -150px;
+		-webkit-transform: scale(0.8);
+		-moz-transform: scale(0.8);
+		transform: scale(0.8);
+		opacity: 0.8; /*opacity proportional to the size*/
+		-webkit-animation: moveclouds 20s linear infinite;
+		-moz-animation: moveclouds 20s linear infinite;
+		-o-animation: moveclouds 20s linear infinite;
+	}
+	@-webkit-keyframes moveclouds {
+		0% {margin-left: 1000px;}
+		100% {margin-left: -1000px;}
+	}
+	@-moz-keyframes moveclouds {
+		0% {margin-left: 1000px;}
+		100% {margin-left: -1000px;}
+	}
+	@-o-keyframes moveclouds {
+		0% {margin-left: 1000px;}
+		100% {margin-left: -1000px;}
+	}
+
+
+/*For 1st menu on the page*/
+#firstmenu {
+	padding: 5%;
+	padding-left: 30%;
+}
+#menu li {
+	display: inline-block; 
+	height: 40px;
+	padding: 1px;
+	font-family: sans-serif;
+}
+#menu li a {
+	color: black;
+}
+#menu li a:hover{
+	color: #B0C4DE;
+}
+.menuhover:after,
+.menuhover::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.menuhover a {
+	position: relative;
+	display: inline-block;
+	margin: 5px 8px;
+	text-decoration: none;
+	letter-spacing: 1px;
+	font-size: .9em;
+}
+.menuhover a:hover,
+.menuhover a:focus {
+	outline: none;
+}
+.menuhover a::before,
+.menuhover a::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+.menuhover a::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+.menuhover a::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+.menuhover a:hover::before,
+.menuhover a:hover::after,
+.menuhover a:focus::before,
+.menuhover a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+
+/*For 2nd menu - Scroll Reveal */
+
+#secondmenu {
+	border-bottom: 3px dotted white;
+	height:90px;
+	width:100%;
+	/*background: #B0E0E6;*/
+	background:	#3D3D3D;
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:500;
+	opacity:.5;
+	padding:15px;
+	font-size:1.5em;
+}
+
+#menulink li a {
+	color: white;
+}
+#menulink li a:hover {
+	color: #87CEEB;
+
+}
+#menu {
+	position: relative;
+}
+#firstline {
+	font-family: 'Fredericka the Great', cursive;
+	font-size: 50px;
+}
+#secondline{
+	font-family: 'Syncopate', sans-serif;
+	font-size: 20px;		
+}
+.brand {
+	font-family: 'Fredericka the Great', cursive;
+	font-size: 40px;
+	color: white;
+	font-weight: 900px;
+	font: bold;
+}
+
